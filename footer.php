@@ -1,10 +1,10 @@
 <div class="container">
     <hr>
-    <?php include("./social.php"); ?>
+    <?php include(__DIR__."/social.php"); ?>
     <footer>
         <div class="row">
             <div class="col-md-6">
-                <p>Copyright &copy; 2020 Online Bank IFSC</p>
+                <p>Copyright &copy; 2021 Online Bank IFSC</p>
             </div>
             <div class="col-md-6 text-md-right">
                 <a href="https://onlinebankifsc.com/privacy-policy" class="text-dark">Privacy Policy</a>

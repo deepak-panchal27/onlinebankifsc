@@ -272,3 +272,11 @@ textarea {
 .svg-inline--fa {
 	vertical-align: -1px;
 }
+.blogimgD{
+	width: 150px;
+    height: 50px;
+}
+.blogimgM{
+	width: 100px;
+    height: 30px;
+}

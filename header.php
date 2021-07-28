@@ -11,7 +11,7 @@ include("connection.php");
 	<link rel='icon' href="https://onlinebankifsc.com/images/favicon.ico" type="image/x-icon" sizes='48x48'>
 	<link rel="apple-touch-icon" sizes="180x180" href="https://onlinebankifsc.com/images/apple-touch-icon.png">
 
-	<?php include("./schema.php");?>
+	<?php include(__DIR__."/schema.php");?>
 
 	<link rel="stylesheet" type="text/css" href="https://onlinebankifsc.com/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="https://onlinebankifsc.com/css/bootstrap.min.css">
@@ -39,7 +39,7 @@ include("connection.php");
 			<div class="container">
 				<button type="button" class="navbar-toggler order-first" data-toggle="collapse" data-target="#navbarCollapse">
 				<script>
-					<?php include("./js/headerjs.js"); ?>
+					<?php include(__DIR__."/js/headerjs.js"); ?>
 				</script>
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -48,6 +48,7 @@ include("connection.php");
 						<h5><a href="https://onlinebankifsc.com/" id="home" class="nav-item nav-link">Home</a></h5>
 						<h5><a href="https://onlinebankifsc.com/bank-list" id="bankname" class="nav-item nav-link">Bank List</a></h5>
 						<h5><a href="https://onlinebankifsc.com/search-bank" id="ifscsearch" class="nav-item nav-link">Search By IFSC Code</a></h5>
+						<h5><a href="https://onlinebankifsc.com/blogs" id="blogs" class="nav-item nav-link">Blogs</a></h5>
 						<h5><a href="https://onlinebankifsc.com/about-us" id="about" class="nav-item nav-link">About Us</a></h5>
 						<h5><a href="https://onlinebankifsc.com/contact-us" id="contact" class="nav-item nav-link">Contact Us</a></h5>
 					</div>
@@ -63,5 +64,5 @@ include("connection.php");
 		</div>
 	</div>
 	<script>
-		<?php include("./js/header-js.js"); ?>
+		<?php include(__DIR__."/js/header-js.js"); ?>
 	</script>

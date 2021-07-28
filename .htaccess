@@ -1,10 +1,15 @@
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^www\.example\.com$
-RewriteRule ^/?$ "http\:\/\/example\.com\/" [R=301,L]
+#RewriteCond %{HTTP_HOST} ^www\.onlinebankifsc\.com$
+#RewriteRule ^/?$ "http\:\/\/onlinebankifsc\.com\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.onlinebankifsc.com [NC]
+RewriteRule ^(.*)$ http://onlinebankifsc.com/$1 [L,R=301]
 
 RewriteRule "^$" /index.php [L]
 RewriteRule "^search-bank$" /search-bank.php [L]
+RewriteRule "^blogs$" /blogs.php [L]
+RewriteRule "^blogs/sbi$" /blogs/sbi.php [L]
 RewriteRule "^about-us$" /about-us.php [L]
 RewriteRule "^contact-us$" /contact-us.php [L]
 RewriteRule "^privacy-policy$" /privacy-policy.php [L]
@@ -15,9 +20,9 @@ RewriteRule "^bank/(.*)/(.*)$" /district.php?bank_name=$1&state_name=$2 [NC,L,QS
 RewriteRule "^bank/(.*)$" /state.php?bank_name=$1 [NC,L,QSA]
 
 
-# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:onlinebankifsc.com
-RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} (www\.)?onlinebankifsc.com
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:onlinebankifsc.com
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:heVeJe
+ErrorDocument 404 /404.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE heVeJe:ERRORPAGEID
+
