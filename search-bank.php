@@ -1,10 +1,8 @@
 <?php
 
-include("connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
 
 $pagename = "search-bank";
-$title = "Using IFSC Code find Bank Branch Details | Contact Number | Address";
-$description = "Find All India Bank Branch details Online using Bank Branch IFSC Code. State Bank of India SBI, Punjab National Bank PNB, HDFC, ICICI, Bank of India BOI, BOB";
 
 $ifsc_textbox = '';
 if (isset($_POST['ifsc_textbox'])) {
@@ -22,7 +20,7 @@ if (isset($_POST['ifsc_textbox'])) {
 }
 
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
 ?>
 	<br>
 	<div class="container">
@@ -103,5 +101,5 @@ include("./header.php");
 	</div>
 	<br>
 	<?php
-	include("./footer.php");
+	require_once(PROJECT_PATH."footer.php")
 	?>

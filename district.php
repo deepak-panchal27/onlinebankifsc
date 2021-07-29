@@ -1,6 +1,6 @@
 <?php
 
-include("connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
 
 $bank_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['bank_name']));
 $state_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['state_name']));
@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $query);
 
 $pagename = "district";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
      <br />
      <div class="container">
@@ -49,4 +49,4 @@ include("./header.php");
           }
      });
      </script>
-<?php include("./footer.php"); ?>
+<?php require_once (PROJECT_PATH."footer.php"); ?>

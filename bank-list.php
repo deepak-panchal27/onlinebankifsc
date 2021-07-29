@@ -1,13 +1,13 @@
 <?php
 
-include("connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
 
 $query = "SELECT * FROM bank_names ORDER BY name ASC";
 $result = mysqli_query($conn, $query);
 
 $pagename = "bank-list";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
      <br />
      <div class="container">
@@ -45,4 +45,4 @@ include("./header.php");
           }
      });
 </script>
-<?php include("./footer.php"); ?>
+<?php require_once (PROJECT_PATH."footer.php"); ?>

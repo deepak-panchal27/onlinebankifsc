@@ -1,10 +1,8 @@
 <?php
 
-$pagename = "blogs";
-$title = "Using IFSC Code find Bank Branch Details | Contact Number | Address";
-$description = "Find All India Bank Branch details Online using Bank Branch IFSC Code. State Bank of India SBI, Punjab National Bank PNB, HDFC, ICICI, Bank of India BOI, BOB";
+$pagename = "sbi";
 
-include("../header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
 ?>
 	<div class="box">
         <h1 class="Header h1">Blogs</h1>
@@ -38,5 +36,5 @@ include("../header.php");
 	</div>
 	<br>
 	<?php
-	include("../footer.php");
+	require_once ($_SERVER['DOCUMENT_ROOT'].'/footer.php');
 	?>

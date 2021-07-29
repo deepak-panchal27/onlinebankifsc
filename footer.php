@@ -1,6 +1,6 @@
 <div class="container">
     <hr>
-    <?php include(__DIR__."/social.php"); ?>
+    <?php require_once (PROJECT_PATH."social.php"); ?>
     <footer>
         <div class="row">
             <div class="col-md-6">

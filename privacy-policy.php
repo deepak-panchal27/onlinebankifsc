@@ -2,7 +2,7 @@
 
 $pagename = "privacy-policy";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
 ?>
 	<br>
 	<div class="box">
@@ -30,4 +30,4 @@ include("./header.php");
 		<h4 class="Header">Consent</h4>
 		<p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
 	</div>
-<?php include("./footer.php"); ?>
+<?php require_once (PROJECT_PATH."footer.php"); ?>

@@ -2,7 +2,7 @@
 
 $pagename = "about";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
 	<br>
 	<div class="box">
@@ -21,4 +21,4 @@ include("./header.php");
 	<p>If you have any query regarding the site, advertisement, or any other issue, please feel free to contact at <a href="mailto:onlinebankifsc@gmail.com"><strong>onlinebankifsc@gmail.com</strong></a></p>
 	</div>
 	<br>
-<?php include("./footer.php"); ?>
+<?php require_once (PROJECT_PATH."footer.php"); ?>

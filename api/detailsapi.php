@@ -1,5 +1,5 @@
 <?php
-include("../connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
 
 $branch_id = mysqli_real_escape_string($conn, str_replace('-', ' ', $_GET['branch_id']));
 

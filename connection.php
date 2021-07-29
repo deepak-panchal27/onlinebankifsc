@@ -1,16 +1,10 @@
 <?php
 
-if(isset($_SERVER['HTTPS'])){
-	$protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
-}else{
-	$protocol = 'http';
+$conn = mysqli_connect( "sql313.epizy.com", "epiz_29261934", "UE572Jn0Vl", "epiz_29261934_ifsc");
+
+if (mysqli_connect_errno()) {
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
 }
-
-$envProtocol = (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] !== "") ? $_SERVER['HTTP_X_FORWARDED_PROTO'] : 'http';
-$siteUrl = $envProtocol . "://" . $_SERVER['HTTP_HOST'].'/';
-
-if (!defined('SITE_URL')) define("SITE_URL", $siteUrl);
-
-$conn = mysqli_connect( "localhost", "root", "", "ifsc");
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-include("../connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
 
 $bank_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_GET['bank_name']));
 $state_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_GET['state_name']));

@@ -1,6 +1,6 @@
 <?php
 
-include("connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
 
 $branch_id = mysqli_real_escape_string($conn, str_replace('-', ' ', $_REQUEST['id']));
 
@@ -13,7 +13,7 @@ $bank_name = $run['name'];
 $branch_name = $run['branch'];
 $heading = "$run[name] - $run[branch] - IFSC Code, MICR, Contact Number, Address";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
 ?>
 	<br>
 	<div class="container">
@@ -68,4 +68,4 @@ include("./header.php");
 			document.execCommand("copy");
 		}
 	</script>
-<?php include("./footer.php"); ?>
+<?php require_once (PROJECT_PATH."footer.php"); ?>

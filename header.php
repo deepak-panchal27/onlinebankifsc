@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/config/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -11,7 +11,7 @@ include("connection.php");
 	<link rel='icon' href="https://onlinebankifsc.com/images/favicon.ico" type="image/x-icon" sizes='48x48'>
 	<link rel="apple-touch-icon" sizes="180x180" href="https://onlinebankifsc.com/images/apple-touch-icon.png">
 
-	<?php include(__DIR__."/schema.php");?>
+	<?php require_once(PROJECT_PATH."schema.php");?>
 
 	<link rel="stylesheet" type="text/css" href="https://onlinebankifsc.com/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="https://onlinebankifsc.com/css/bootstrap.min.css">
@@ -39,7 +39,7 @@ include("connection.php");
 			<div class="container">
 				<button type="button" class="navbar-toggler order-first" data-toggle="collapse" data-target="#navbarCollapse">
 				<script>
-					<?php include(__DIR__."/js/headerjs.js"); ?>
+					<?php require_once(PROJECT_PATH."js/headerjs.js"); ?>
 				</script>
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -64,5 +64,5 @@ include("connection.php");
 		</div>
 	</div>
 	<script>
-		<?php include(__DIR__."/js/header-js.js"); ?>
+		<?php require_once(PROJECT_PATH."js/header-js.js"); ?>
 	</script>

@@ -2,7 +2,7 @@
 
 $pagename = "contact";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
 ?>
 	<br>
 	<div class="box">
@@ -12,4 +12,4 @@ include("./header.php");
 		<p>We look forward to hearing from our users.</p>
 	</div>
 	<br>
-<?php include("./footer.php"); ?>
+<?php require_once (PROJECT_PATH."footer.php"); ?>

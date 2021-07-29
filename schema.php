@@ -34,8 +34,8 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
             break;
     
 		case 'search-bank':
-			$title = $title;
-            $description = $description;
+			$title = "Using IFSC Code find Bank Branch Details | Contact Number | Address";
+			$description = "Find All India Bank Branch details Online using Bank Branch IFSC Code. State Bank of India SBI, Punjab National Bank PNB, HDFC, ICICI, Bank of India BOI, BOB";
 			break;
 			
 		case 'about':
@@ -52,6 +52,14 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 			$title = "Online Bank IFSC Privacy Policy";
 			$description = "This privacy policy describes the policies followed by Online Bank IFSC. Read our privacy policy to understand better.";
 			break;
+
+		case 'blogs':
+			$title = "Using IFSC Code find Bank Branch Details | Contact Number | Address";
+			$description = "Find All India Bank Branch details Online using Bank Branch IFSC Code. State Bank of India SBI, Punjab National Bank PNB, HDFC, ICICI, Bank of India BOI, BOB";
+
+	    case 'sbi':
+			$title = "State Bank of India (SBI) - Blog";
+			$description = "Find All India Bank Branch details Online using Bank Branch IFSC Code. State Bank of India SBI, Punjab National Bank PNB, HDFC, ICICI, Bank of India BOI, BOB";
 
 		default:
 			$title = "Find Bank IFSC | Find MICR Code | Bank Branch Details";

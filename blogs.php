@@ -1,10 +1,8 @@
 <?php
 
 $pagename = "blogs";
-$title = "Using IFSC Code find Bank Branch Details | Contact Number | Address";
-$description = "Find All India Bank Branch details Online using Bank Branch IFSC Code. State Bank of India SBI, Punjab National Bank PNB, HDFC, ICICI, Bank of India BOI, BOB";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
 	<div class="box">
         <h1 class="Header h1">Blogs</h1>
@@ -40,6 +38,4 @@ include("./header.php");
 <!--<p>State Bank of India (SBI) is the biggest bank in India. It has a 23% Market Share by Assets and a 25% share in the Loans and Deposit Market.To just highlight the sheer size of the bank, it has over 24,000 branches in India and has 3.68 Lakh Crore in Revenue in Financial Year 2020. Among all Indian banks, SBI has the highest number of branches outside India too. About 191 of them in 36 countries as of 2015. But it was not always this big. Let us dig into its history a bit. Read More</p>-->
 	</div>
 	<br>
-	<?php
-	include("./footer.php");
-	?>
+	<?php require_once (PROJECT_PATH."footer.php"); ?>

@@ -2,7 +2,8 @@
 
 $pagename = "index";
 
-include("./header.php"); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
 	<br>
 	<div class="container">
@@ -198,6 +199,6 @@ include("./header.php");
 
 	</div>
 	<script>
-<?php include("./js/script.js"); ?>
+<?php require_once(PROJECT_PATH."js/script.js"); ?>
 	</script>
-<?php include("./footer.php"); ?>
+<?php require_once(PROJECT_PATH."footer.php"); ?>
