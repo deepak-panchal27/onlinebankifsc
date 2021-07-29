@@ -1,0 +1,6 @@
+[09-Sep-2020 02:46:50 UTC] PHP Notice:  Undefined index: state_name in /home/u444992856/domains/onlinebankifsc.com/public_html/api/districtapi.php on line 5
+[09-Sep-2020 02:47:58 UTC] PHP Notice:  Undefined index: state_name in /home/u444992856/domains/onlinebankifsc.com/public_html/api/branchapi.php on line 5
+[09-Sep-2020 02:47:58 UTC] PHP Notice:  Undefined index: district_name in /home/u444992856/domains/onlinebankifsc.com/public_html/api/branchapi.php on line 6
+[11-Sep-2020 20:43:47 UTC] PHP Notice:  Undefined index: state_name in /home/u444992856/domains/onlinebankifsc.com/public_html/api/districtapi.php on line 5
+[11-Sep-2020 20:43:49 UTC] PHP Notice:  Undefined index: state_name in /home/u444992856/domains/onlinebankifsc.com/public_html/api/branchapi.php on line 5
+[11-Sep-2020 20:43:49 UTC] PHP Notice:  Undefined index: district_name in /home/u444992856/domains/onlinebankifsc.com/public_html/api/branchapi.php on line 6
