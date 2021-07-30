@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 $pagename = "index";
 
-require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 ?>
 	<br>
 	<div class="container">
@@ -36,15 +36,16 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 								<td>
 									<div id="bank">
 										<?php
-										$result = mysqli_query($conn, "SET NAMES utf8mb4");
-										$result = mysqli_query($conn, "SELECT * FROM bank_names ORDER BY name ASC");
-										echo '<div>';
-										echo '<select class="mdb-select md-form select1 bank"><option value="" disabled selected>Select Bank</option>';
-										while ($run = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-											echo "<option value='" . $run['name'] . "'>" . $run['name'] . "</option>";
-										}
-										echo '</select></div>';
-										?>
+$result = mysqli_query($conn, "SET NAMES utf8mb4");
+$result = mysqli_query($conn, "SELECT * FROM bank_names ORDER BY name ASC");
+echo '<div>';
+echo '<select class="mdb-select md-form select1 bank"><option value="" disabled selected>Select Bank</option>';
+while ($run = mysqli_fetch_array($result, MYSQLI_ASSOC))
+{
+    echo "<option value='" . $run['name'] . "'>" . $run['name'] . "</option>";
+}
+echo '</select></div>';
+?>
 									</div>
 								</td>
 							</tr>
@@ -115,7 +116,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 			<li><a href="#How-to-find-IFSC-Code-for-my-bank-using-the-search-tool">How to find IFSC Code for my bank using the search tool?</a></li>
 			<li><a href="#How-to-find-my-Bank-Branch-Details-using-IFSC-Code">How to find my Bank Branch Details using IFSC Code?</a></li>
 			<li><a href="#What-is-IFSC-Code-and-what-it-signifies">What is IFSC Code and what it signifies?</a></li>
-			<li><a href="#What is MICR Code and what it signifies?">What is MICR Code and what it signifies?</a></li>
+			<li><a href="#What-is-MICR-Code-and-what-it-signifies?">What is MICR Code and what it signifies?</a></li>
 			<li><a href="#NEFT-Fund-Transfer-using-IFSC-Code">NEFT Fund Transfer using IFSC Code</a></li>
 			<li><a href="#RTGS-Fund-Transfer-using-IFSC-Code">RTGS Fund Transfer using IFSC Code</a></li>
 			<li><a href="#Fund-transfer-using-IMPS">Fund transfer using IMPS</a></li>
@@ -168,7 +169,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 		<p>You can find your bank branch’s IFSC Code on your checkbook or bank passbook. You can also find using our search tool <a href="#searchBox">here</a></p>
 		<p>The first four digits signify bank name, the fifth digit is Zero (0) and the last six digits are branch code. IFSC code is required during fund transfer using online means like NEFT, RTGS, or IMPS. You require the IFSC Code of the recipient's bank branch. It helps in reducing errors and frauds in the online transfer of funds.</p>
 		<p>Example: IFSC Code: SBIN0001537. This is the IFSC code of State Bank of India’s Branch. And 001537 is the branch code of the Connaught Place Branch of SBI in New Delhi.</p>
-		<h4 class="Header" id="What is MICR Code and what it signifies?">What is MICR Code and what it signifies?</h4>
+		<h4 class="Header" id="What-is-MICR-Code-and-what-it-signifies?">What is MICR Code and what it signifies?</h4>
 		<p>MICR Code stands for Magnetic Ink Character Recognition. It’s a nine-digit code printed at the bottom of cheque leaves and is used in ECS (Electronic Clearing System). This is used to identify the authenticity of cheques. It can be read by humans and machines. Each Bank Branch has a unique MICR Code which helps RBI identify the same. The first 3 digits are the city code, the next 3 are bank code and the last 3 are bank branch code.</p>
 		<p>Example: 110002087. Here 110 is city code, 002 is State bank of India’s Code and 087 is the branch code</p>
 		<p>Search IFSC and MICR codes of every bank branch in India.</p>
@@ -199,6 +200,6 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 
 	</div>
 	<script>
-<?php require_once(PROJECT_PATH."js/script.js"); ?>
+<?php require_once (PROJECT_PATH . "js/script.js"); ?>
 	</script>
-<?php require_once(PROJECT_PATH."footer.php"); ?>
+<?php require_once (PROJECT_PATH . "footer.php"); ?>

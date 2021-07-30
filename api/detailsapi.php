@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'].'/connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 
 $branch_id = mysqli_real_escape_string($conn, str_replace('-', ' ', $_GET['branch_id']));
 
@@ -7,7 +7,7 @@ $result = mysqli_query($conn, "SET NAMES utf8mb4");
 $result = mysqli_query($conn, "SELECT * FROM data WHERE md5(id)='$branch_id'");
 $run = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-$title = "$run[name] - $run[branch] - IFSC Code, MICR, Contact Number, Address";
+$title = $run['name'] . " - " . $run['branch'] . " - IFSC Code, MICR, Contact Number, Address";
 ?>
 <h4 class="Header"><?php echo $title; ?></h4>
 	<div class="row">
@@ -27,7 +27,7 @@ $title = "$run[name] - $run[branch] - IFSC Code, MICR, Contact Number, Address";
 				</tr>
 				<tr>
 					<th>IFSC Code</th>
-					<td style='font-weight: bold; text-decoration: underline;'><input type="text" value="<?php echo $run['ifsc']; ?>" id="myInput" style="width: 120px;"><button onclick="myFunction()" style="margin-left: 10px;">Copy IFSC Code</button></td>
+					<td style='font-weight: bold; text-decoration: underline;'><input type="text" value="<?php echo $run['ifsc']; ?>" id="myInput" style="width: 120px;"><button onclick="myFunction()" style="margin-left: 10px;">Copy IFSC Code</button><span class="tooltiptext">Copied!</span></td>
 				</tr>
 				<tr>
 					<th>MICR Code</th>

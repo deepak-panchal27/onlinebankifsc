@@ -73,55 +73,56 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 <meta name="Author" content="OnlineBankIFSC.com" />
 
 <!-- OG Share Properties -> Start -->
-				<meta property="og:url" content="https://onlinebankifsc.com/" /> 
-				<meta property="og:title" content="<?php echo $title; ?>" />
-				<meta property="og:description" content="<?php echo $description; ?>" />
-				<meta property="og:image" content="https://onlinebankifsc.com/images/100x100.png" />
-		<meta property="og:type" content="article" />
+<meta property="og:url" content="https://onlinebankifsc.com/" /> 
+<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:description" content="<?php echo $description; ?>" />
+<meta property="og:image" content="https://onlinebankifsc.com/images/100x100.png" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="onlinebankifsc">
+<meta property="og:locale" content="en_US"/>
 <!-- End <- OG Share Properties -->
 
 <!-- Twitter Share Properties -> Start -->
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@onlinebankifsc" />
-				<meta name="twitter:creator" content="@onlinebankifscteam" />
-				<meta name="twitter:url" content="https://onlinebankifsc.com/" />
-				<meta name="twitter:title" content="<?php echo $title; ?>"/>
-				<meta name="twitter:description" content="<?php echo $description; ?>" />
-				<meta name="twitter:image:src" content="https://onlinebankifsc.com/images/100x100.png" />
-	<!-- End <- Twitter Share Properties -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@onlinebankifsc" />
+<meta name="twitter:creator" content="@onlinebankifscteam" />
+<meta name="twitter:url" content="https://onlinebankifsc.com/" />
+<meta name="twitter:title" content="<?php echo $title; ?>"/>
+<meta name="twitter:description" content="<?php echo $description; ?>" />
+<meta name="twitter:image:src" content="https://onlinebankifsc.com/images/100x100.png" />
+<!-- End <- Twitter Share Properties -->
 
 <!-- Canonical Notification -> Start -->
-	<link rel="canonical" href="<?php echo $actual_link;?>" />
+<link rel="canonical" href="<?php echo $actual_link;?>" />
 <!-- End <- Canonical Notification -->
 
 <!-- WebPage Schema -> Start -->
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "WebPage",
-			"name": "<?php echo $title; ?>",
-			"description": "<?php echo $description; ?>",
-			"url" : "<?php echo $actual_link;?>",
-			"publisher": {
-				"@type": "Organization",
-				"name": "Online Bank IFSC",
-				"url" : "https://onlinebankifsc.com/",
-				"logo" : {
-					"@type": "ImageObject",
-					"contentUrl": "https://onlinebankifsc.com/images/100x100.png"
-				}
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "<?php echo $title; ?>",
+		"description": "<?php echo $description; ?>",
+		"url" : "<?php echo $actual_link;?>",
+		"publisher": {
+			"@type": "Organization",
+			"name": "Online Bank IFSC",
+			"url" : "https://onlinebankifsc.com/",
+			"logo" : {
+				"@type": "ImageObject",
+				"contentUrl": "https://onlinebankifsc.com/images/100x100.png"
 			}
 		}
-	</script>
+	}
+</script>
 <!-- End <- WebPage Schema -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177066746-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-177066746-1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-177066746-1');
 </script>
 <!-- End Global site tag (gtag.js) - Google Analytics -->

@@ -161,4 +161,5 @@ var IsMobile;
 			copyText.select();
 			copyText.setSelectionRange(0, 99999)
 			document.execCommand("copy");
+			document.querySelector('.tooltiptext').setAttribute('style','visibility:visible');
 		}

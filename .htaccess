@@ -17,7 +17,7 @@ Header always set Content-Security-Policy "upgrade-insecure-requests;"
 RewriteRule "^$" /index.php [L]
 RewriteRule "^search-bank$" /search-bank.php [L]
 RewriteRule "^blogs$" /blogs.php [L]
-RewriteRule "^blogs/sbi$" /blogs/sbi.php [L]
+RewriteRule "^blogs/sbi$" /blog/sbi.php [L]
 RewriteRule "^about-us$" /about-us.php [L]
 RewriteRule "^contact-us$" /contact-us.php [L]
 RewriteRule "^privacy-policy$" /privacy-policy.php [L]

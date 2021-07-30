@@ -1,8 +1,7 @@
 <?php
-
 $pagename = "sbi";
 
-require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php'); 
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 ?>
 	<div class="box">
         <h1 class="Header h1">Blogs</h1>
@@ -36,5 +35,5 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 	</div>
 	<br>
 	<?php
-	require_once ($_SERVER['DOCUMENT_ROOT'].'/footer.php');
-	?>
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/footer.php');
+?>
