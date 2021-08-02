@@ -1,7 +1,7 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 
-$bank_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['bank_name']));
+$bank_name = mysqli_real_escape_string($conn, $_REQUEST['bank_name']);
 
 $query = "SELECT * FROM data WHERE name='$bank_name' GROUP BY state";
 
@@ -24,7 +24,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 while ($row = mysqli_fetch_array($result))
 {
 ?><tr>
-                               <td><a href="<?php echo SITE_URL . "bank/" . str_replace(' ', '-', $row['name']) . "/" . str_replace(' ', '-', $row['state']) ?>"><?php echo $row['state']; ?></a></td>
+                               <td><a href="<?php echo SITE_URL . "bank/" . urlencode($row['name']) . "/" . urlencode($row['state']) ?>"><?php echo $row['state']; ?></a></td>
                                </tr>
                                <?php
 }

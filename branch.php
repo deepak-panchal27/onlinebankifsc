@@ -1,9 +1,10 @@
 <?php
+
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 
-$bank_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['bank_name']));
-$state_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['state_name']));
-$district_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['district_name']));
+$bank_name = mysqli_real_escape_string($conn, $_REQUEST['bank_name']);
+$state_name = mysqli_real_escape_string($conn, $_REQUEST['state_name']);
+$district_name = mysqli_real_escape_string($conn, $_REQUEST['district_name']);
 
 $query = "SELECT * FROM data WHERE name='$bank_name' AND state='$state_name' AND district='$district_name' GROUP BY branch";
 

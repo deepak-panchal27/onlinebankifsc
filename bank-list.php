@@ -21,7 +21,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 while ($row = mysqli_fetch_array($result))
 {
 ?><tr>
-                              <td><a href="<?php echo SITE_URL . "bank/" . str_replace(' ', '-', $row['name']) ?>"><?php echo $row['name']; ?></a></td>
+                              <td><a href="<?php echo SITE_URL . "bank/" . urlencode($row['name']) ?>"><?php echo $row['name']; ?></a></td>
                               </tr>
                               <?php
 }

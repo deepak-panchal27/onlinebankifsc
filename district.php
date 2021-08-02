@@ -1,8 +1,9 @@
 <?php
+
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 
-$bank_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['bank_name']));
-$state_name = str_replace('-', ' ', mysqli_real_escape_string($conn, $_REQUEST['state_name']));
+$bank_name = mysqli_real_escape_string($conn, $_REQUEST['bank_name']);
+$state_name = mysqli_real_escape_string($conn, $_REQUEST['state_name']);
 
 $query = "SELECT * FROM data WHERE name='$bank_name' AND state='$state_name' GROUP BY district";
 
@@ -25,7 +26,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 while ($row = mysqli_fetch_array($result))
 {
 ?><tr>
-                              <td><a href="<?php echo SITE_URL . "bank/" . str_replace(' ', '-', $row['name']) . "/" . str_replace(' ', '-', $row['state']) . "/" . str_replace(' ', '-', $row['district']) ?>"><?php echo $row['district']; ?></a></td>
+                              <td><a href="<?php echo SITE_URL . "bank/" . urlencode($row['name']) . "/" . urlencode($row['state']) . "/" . urlencode($row['district']) ?>"><?php echo $row['district']; ?></a></td>
                               </tr>
                               <?php
 }
