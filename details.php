@@ -35,7 +35,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 						</tr>
 						<tr>
 							<th>IFSC Code</th>
-							<td><input type="text" value="<?php echo $run['ifsc']; ?>" id="myInput"><button onclick="myFunction()" class="copybutton">Copy IFSC Code</button><span class="tooltiptext">Copied!</span></td>
+							<td><input type="text" value="<?php echo $run['ifsc']; ?>" id="myInput" readonly><button onclick="myFunction()" class="copybutton">Copy IFSC Code</button><span class="tooltiptext">Copied!</span></td>
 						</tr>
 						<tr>
 							<th>MICR Code</th>
@@ -51,7 +51,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/header.php');
 					<table class="maxwidth">
 						<tr>
 							<th>Address</th>
-							<td><textarea class="addresstextarea"><?php echo "$run[address]"; ?></textarea></td>
+							<td><textarea class="addresstextarea" readonly><?php echo "$run[address]"; ?></textarea></td>
 						</tr>
 					</table>
 				</div>

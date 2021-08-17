@@ -27,7 +27,7 @@ $title = $run['name'] . " - " . $run['branch'] . " - IFSC Code, MICR, Contact Nu
 				</tr>
 				<tr>
 					<th>IFSC Code</th>
-					<td style='font-weight: bold; text-decoration: underline;'><input type="text" value="<?php echo $run['ifsc']; ?>" id="myInput" style="width: 120px;"><button onclick="myFunction()" style="margin-left: 10px;">Copy IFSC Code</button><span class="tooltiptext">Copied!</span></td>
+					<td style='font-weight: bold; text-decoration: underline;'><input type="text" value="<?php echo $run['ifsc']; ?>" id="myInput" readonly><button onclick="myFunction()" style="margin-left: 10px;">Copy IFSC Code</button><span class="tooltiptext">Copied!</span></td>
 				</tr>
 				<tr>
 					<th>MICR Code</th>
@@ -43,7 +43,7 @@ $title = $run['name'] . " - " . $run['branch'] . " - IFSC Code, MICR, Contact Nu
 			<table style="width: 100%;">
 				<tr>
 					<th>Address</th>
-					<td><textarea style='width:200px; height: 150px; resize: none;'><?php echo "$run[address]"; ?></textarea></td>
+					<td><textarea style='width:200px; height: 150px; resize: none;' readonly><?php echo "$run[address]"; ?></textarea></td>
 				</tr>
 			</table>
 		</div>
