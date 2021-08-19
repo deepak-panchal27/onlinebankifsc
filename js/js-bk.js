@@ -70,12 +70,12 @@ var IsMobile;
 				$("select.state").removeAttr('disabled');
 				$("#state").find("span")[2].style.backgroundColor = 'yellow';
 				$("select.district").empty();
-				$("select.district").append($('<option></option>').text('Select District Above First'));
+				$("select.district").append($('<option></option>').text('Select State Above First'));
 				$("select.district").attr('disabled', 'disabled');
 				$("select.branch").empty();
 				$("#details").parent().removeClass('box');
 				$("#details").empty();
-				$("select.branch").append($('<option></option>').text('Select Branch Above First'));
+				$("select.branch").append($('<option></option>').text('Select District Above First'));
 				$("select.branch").attr('disabled', 'disabled');
 				var selectedBank = $(this).children("option:selected").val();
 				$.ajax({
@@ -83,6 +83,8 @@ var IsMobile;
 					success: function(result) {
 						$("select.state").empty();
 						$("select.state").append($('<option></option>').text('Select State'));
+						var state = $("select.state").find('option')[0];
+						state.setAttribute('disabled', true);
 						$.each(JSON.parse(result), function(key, entry) {
 							$("select.state").append($('<option></option>').attr('value', entry.value).attr('data-bankname', entry.bankname).text(entry.value));
 						});
@@ -109,6 +111,8 @@ var IsMobile;
 					success: function(result) {
 						$("select.district").empty();
 						$("select.district").append($('<option></option>').text('Select District'));
+						var district = $("select.district").find('option')[0];
+						district.setAttribute('disabled', true);
 						$.each(JSON.parse(result), function(key, entry) {
 							$("select.district").append($('<option></option>').attr('value', entry.value).attr('data-bankname', entry.bankname).attr('data-statename', entry.statename).text(entry.value));
 						});
@@ -134,6 +138,8 @@ var IsMobile;
 						$("select.branch").empty();
 						$("#branch").find("span")[2].style.backgroundColor = 'yellow';
 						$("select.branch").append($('<option></option>').text('Select Branch'));
+						var branch = $("select.branch").find('option')[0];
+						branch.setAttribute('disabled', true);
 						$.each(JSON.parse(result), function(key, entry) {
 							$("select.branch").append($('<option></option>').attr('id', entry.id).text(entry.value));
 						});
