@@ -83,8 +83,6 @@ var IsMobile;
 					success: function(result) {
 						$("select.state").empty();
 						$("select.state").append($('<option></option>').text('Select State'));
-						var state = $("select.state").find('option')[0];
-						state.setAttribute('disabled', true);
 						$.each(JSON.parse(result), function(key, entry) {
 							$("select.state").append($('<option></option>').attr('value', entry.value).attr('data-bankname', entry.bankname).text(entry.value));
 						});
@@ -92,6 +90,11 @@ var IsMobile;
 				});
 			});
 			$("select.state").change(function() {
+				var selectedState = $(this).children("option:selected").val();
+				var bankname = $(this).children("option:selected").data('bankname');
+				if (selectedState == "Select State") {
+					return false;
+				}
 				$("#state").find("span")[2].style.backgroundColor = '';
 				$("#branch").find("span")[2].style.backgroundColor = '';
 				$("select.district").removeAttr('disabled');
@@ -101,18 +104,11 @@ var IsMobile;
 				$("select.branch").append($('<option></option>').text('Select District Above First'));
 				$("#details").parent().removeClass('box');
 				$("#details").empty();
-				var selectedState = $(this).children("option:selected").val();
-				var bankname = $(this).children("option:selected").data('bankname');
-				if (selectedState == "Select State") {
-					return false;
-				}
 				$.ajax({
 					url: "api/districtapi.php?bank_name=" + bankname + "&state_name=" + selectedState,
 					success: function(result) {
 						$("select.district").empty();
 						$("select.district").append($('<option></option>').text('Select District'));
-						var district = $("select.district").find('option')[0];
-						district.setAttribute('disabled', true);
 						$.each(JSON.parse(result), function(key, entry) {
 							$("select.district").append($('<option></option>').attr('value', entry.value).attr('data-bankname', entry.bankname).attr('data-statename', entry.statename).text(entry.value));
 						});
@@ -120,17 +116,17 @@ var IsMobile;
 				});
 			});
 			$("select.district").change(function() {
-				$("#district").find("span")[2].style.backgroundColor = '';
-				$("select.branch").removeAttr('disabled');
-				$("#branch").find("span")[2].style.backgroundColor = 'yellow';
-				$("#details").parent().removeClass('box');
-				$("#details").empty();
 				var districtname = $(this).children("option:selected").val();
 				var bankname = $(this).children("option:selected").data('bankname');
 				var selectedState = $(this).children("option:selected").data('statename');
 				if (districtname == "Select District") {
 					return false;
 				}
+				$("#district").find("span")[2].style.backgroundColor = '';
+				$("select.branch").removeAttr('disabled');
+				$("#branch").find("span")[2].style.backgroundColor = 'yellow';
+				$("#details").parent().removeClass('box');
+				$("#details").empty();
 				$.ajax({
 					url: "api/branchapi.php?bank_name=" + bankname + "&state_name=" + selectedState + "&district_name=" + districtname,
 					success: function(result) {
@@ -138,8 +134,6 @@ var IsMobile;
 						$("select.branch").empty();
 						$("#branch").find("span")[2].style.backgroundColor = 'yellow';
 						$("select.branch").append($('<option></option>').text('Select Branch'));
-						var branch = $("select.branch").find('option')[0];
-						branch.setAttribute('disabled', true);
 						$.each(JSON.parse(result), function(key, entry) {
 							$("select.branch").append($('<option></option>').attr('id', entry.id).text(entry.value));
 						});
@@ -165,7 +159,7 @@ var IsMobile;
 		function myFunction() {
 			var copyText = document.getElementById("myInput");
 			copyText.select();
-			copyText.setSelectionRange(0, 99999)
+			copyText.setSelectionRange(0, 99999);
 			document.execCommand("copy");
 			document.querySelector('.tooltiptext').setAttribute('style','visibility:visible');
 		}
